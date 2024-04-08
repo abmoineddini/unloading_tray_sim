@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" >
+
+    <material name="white">
+        <color rgba="1 1 1 1"/>
+    </material>
+
+    <material name="red">
+        <color rgba="1 0 0 1"/>
+    </material>
+
+    <link name="camera_link">
+        <visual>
+            <geometry>
+                <box size="0.025 0.12 0.025"/>
+            </geometry>
+            <material name="white"/>
+        </visual>
+    </link>
+
+    <link name="camera_link_optical"></link>
+
+    <joint name="camera_joint" type="fixed">
+        <parent link="link7"/>
+        <child link="camera_link"/>
+        <origin xyz="0 -0.03 0" rpy="0 ${+pi/2} ${-pi/2}"/>
+    </joint>
+
+    <joint name="camera_optical_joint" type="fixed">
+        <parent link="camera_link"/>
+        <child link="camera_link_optical"/>
+        <origin xyz="0 0.0125 -0.025" rpy="${-pi/2} ${pi} ${-pi/2}"/>
+    </joint>
+
+    <gazebo reference="camera_link">
+        <material>Gazebo/Grey</material>
+
+        <sensor name="camera" type="depth">
+            <pose> 0 0 0 0 0 0 </pose>
+            <visualize>true</visualize>
+            <update_rate>30</update_rate>
+            <camera>
+                <horizontal_fov>1.4</horizontal_fov>
+                <image>
+                    <format>B8G8R8</format>
+                    <width>640</width>
+                    <height>480</height>
+                </image>
+                <clip>
+                    <near>0.05</near>
+                    <far>8.0</far>
+                </clip>
+            </camera>
+            <plugin name="camera_controller" filename="libgazebo_ros_camera.so">
+                <frame_name>camera_link_optical</frame_name>
+            </plugin>
+        </sensor>
+    </gazebo>
+
+
+</robot>

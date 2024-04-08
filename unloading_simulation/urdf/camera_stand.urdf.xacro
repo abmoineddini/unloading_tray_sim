@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro"  name="blue_tray">
+
+
+  <xacro:include filename="robot_frame.xacro"/>
+  <xacro:include filename="gazebo_plugin.xacro"/>
+  <xacro:include filename="depth_camera.xacro" />
+
+
+</robot>
+
+
+<!-- ros2 topic pub -1 /set_joint_trajectory trajectory_msgs/msg/JointTrajectory  '{header: {frame_id: world}, joint_names: [x_joint, y_joint, z_joint], points: [{positions: {0.3,0.3,0.3}, velocities: {0.02,0.01,0.01}}}]} -->

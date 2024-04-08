@@ -1,0 +1,69 @@
+<?xml version="1.0" ?>
+<sdf version="1.4">
+  <world name="default">
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+    <include>
+      <uri>model://sun</uri>
+    </include>
+    <include>
+      <uri>model://blue_tray</uri>
+      <name>blue_tray0</name>
+      <pose>0.35 0.25 0.2 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://blue_tray</uri>
+      <name>blue_tray1</name>
+      <pose>0.35 0.651 0.2 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://blue_tray</uri>
+      <name>blue_tray2</name>
+      <pose>0.35 1.052 0.2 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://blue_tray</uri>
+      <name>blue_tray3</name>
+      <pose>0.852 0.35 0.2 0 0 1.5708</pose>
+    </include>
+    <include>
+      <uri>model://blue_tray</uri>
+      <name>blue_tray4</name>
+      <pose>0.852 0.952 0.2 0 0 1.5708</pose>
+    </include>
+    <include>
+      <uri>model://blue_tray</uri>
+      <name>blue_tray5</name>
+      <pose>0.35 0.25 0.4 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://blue_tray</uri>
+      <name>blue_tray6</name>
+      <pose>0.35 0.651 0.4 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://blue_tray</uri>
+      <name>blue_tray7</name>
+      <pose>0.35 1.052 0.4 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://blue_tray</uri>
+      <name>blue_tray8</name>
+      <pose>0.852 0.35 0.4 0 0 1.5708</pose>
+    </include>
+    <include>
+      <uri>model://blue_tray</uri>
+      <name>blue_tray9</name>
+      <pose>0.852 0.952 0.4 0 0 1.5708</pose>
+    </include>
+    <physics type="ode">
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1</real_time_factor>
+      <real_time_update_rate>1000</real_time_update_rate>
+      <!-- (2022-12-20) humble: change gravity from [0 0 -9.81] to [0 0 0] -->
+      <gravity>0 0 -9.81</gravity>
+    </physics>
+
+  </world>
+</sdf>
