@@ -26,9 +26,9 @@ class Camera(Node):
         
     def callback(self, data):
         image = self.bridge.imgmsg_to_cv2(data)
-        imageRGB = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+        image = cv2.GaussianBlur(image, (11, 11), 0)
 
-        imgHSV= cv2.cvtColor(imageRGB,cv2.COLOR_RGB2HSV)
+        imgHSV= cv2.cvtColor(image,cv2.COLOR_BGR2HSV)
         h_min = cv2.getTrackbarPos("Hue Min","TrackBars_HSV")
         h_max = cv2.getTrackbarPos("Hue Max", "TrackBars_HSV")
         s_min = cv2.getTrackbarPos("Sat Min", "TrackBars_HSV")

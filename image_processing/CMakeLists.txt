@@ -42,6 +42,7 @@ ament_python_install_package(${PROJECT_NAME})
 # Install Python executables
 install(PROGRAMS
   scripts/image_colour_seg_calib_sim.py
+  scripts/tray_detection_sim.py
   DESTINATION lib/${PROJECT_NAME}
 )
 

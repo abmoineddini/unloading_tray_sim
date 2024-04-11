@@ -15,22 +15,22 @@
     <include>
       <uri>model://blue_tray</uri>
       <name>blue_tray1</name>
-      <pose>0.35 0.651 0.2 0 0 0</pose>
+      <pose>0.35 0.654 0.2 0 0 0</pose>
     </include>
     <include>
       <uri>model://blue_tray</uri>
       <name>blue_tray2</name>
-      <pose>0.35 1.052 0.2 0 0 0</pose>
+      <pose>0.35 1.059 0.2 0 0 0</pose>
     </include>
     <include>
       <uri>model://blue_tray</uri>
       <name>blue_tray3</name>
-      <pose>0.852 0.35 0.2 0 0 1.5708</pose>
+      <pose>0.855 0.35 0.2 0 0 1.5708</pose>
     </include>
     <include>
       <uri>model://blue_tray</uri>
       <name>blue_tray4</name>
-      <pose>0.852 0.952 0.2 0 0 1.5708</pose>
+      <pose>0.855 0.953 0.2 0 0 1.5708</pose>
     </include>
     <include>
       <uri>model://blue_tray</uri>
@@ -40,22 +40,22 @@
     <include>
       <uri>model://blue_tray</uri>
       <name>blue_tray6</name>
-      <pose>0.35 0.651 0.4 0 0 0</pose>
+      <pose>0.35 0.654 0.4 0 0 0</pose>
     </include>
     <include>
       <uri>model://blue_tray</uri>
       <name>blue_tray7</name>
-      <pose>0.35 1.052 0.4 0 0 0</pose>
+      <pose>0.35 1.059 0.4 0 0 0</pose>
     </include>
     <include>
       <uri>model://blue_tray</uri>
       <name>blue_tray8</name>
-      <pose>0.852 0.35 0.4 0 0 1.5708</pose>
+      <pose>0.855 0.35 0.4 0 0 1.5708</pose>
     </include>
     <include>
       <uri>model://blue_tray</uri>
       <name>blue_tray9</name>
-      <pose>0.852 0.952 0.4 0 0 1.5708</pose>
+      <pose>0.855 0.954 0.4 0 0 1.5708</pose>
     </include>
     <physics type="ode">
       <max_step_size>0.001</max_step_size>
